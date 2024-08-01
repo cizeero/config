@@ -39,3 +39,9 @@ require("lazy").setup({
 
 -- Add shortcuts for fzf to open
 vim.api.nvim_set_keymap('n', '<C-f>', ':lua require("fzf-lua").files()<CR>', { noremap = true, silent = true })
+
+-- Map Page Down to go to the next tab
+vim.api.nvim_set_keymap('n', '<PageDown>', 'gt', { noremap = true, silent = true })
+
+-- Map Page Up to go to the previous tab
+vim.api.nvim_set_keymap('n', '<PageUp>', 'gT', { noremap = true, silent = true })
