@@ -1,0 +1,8 @@
+profile {
+	# DEFAULT PROFILE
+	# This profile will activate when the 'eDP-1' output is connected.
+	# It ensures the output is enabled, sets the native resolution and refresh rate,
+	# positions it at 0,0 (top-left), and applies a 1.0 scale factor (no explicit scaling).
+	# If you want to try fractional scaling, change 'scale 1.0' to 'scale 1.25' or 'scale 1.5'
+	output "eDP-1" enable mode 1920x1200@60.026Hz position 0,0 scale 1.25
+}

@@ -1,0 +1,25 @@
+# Enable history
+HISTFILE="$HOME/.config/zsh/zsh_history"
+HISTSIZE=100000
+SAVEHIST=$HISTSIZE
+setopt appendhistory # Append history to the history file
+setopt sharehistory # Share history between all terminal sessions
+setopt hist_ignore_all_dups # Don't store duplicate commands
+setopt inc_append_history # Save history incrementally
+setopt interactive_comments # Allow comments in interactive mode
+
+# Enable auto-completion
+autoload -U compinit
+compinit
+
+# Case-insensitive completion
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# Automatically change directory (e.g., `cd` is not required)
+setopt autocd
+
+# Enable extended globbing (more powerful filename expansion)
+setopt extended_glob
+
+# Show completion menu even if there's only one match
+zstyle ':completion:*' menu yes select
